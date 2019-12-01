@@ -228,7 +228,7 @@ function addManufacturers() {
             <em>founded</em>
         </label>
             <div class="field">
-                <input type="number" name="founded">
+                <input type="text" name="founded" placeholder="Month Day, Year">
             </div>
         </div>
       

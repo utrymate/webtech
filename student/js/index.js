@@ -4,8 +4,8 @@ $( document ).ready(function() {
 
 function ShowCars() {
     let contents = $(".contents");
-    contents.empty(); //ne egymás alá rakja sokszor kattnál
-    contents.show();  //mutassa a divet
+    contents.empty();
+    contents.show();
     $(".form").hide();
     contents.append(`
         <table id="theTable">
@@ -22,7 +22,7 @@ function ShowCars() {
         `);
 
     $.get( "/cars", function( datas ) {
-        datas.forEach(function(value) { //függvényt fogad el paraméternek
+        datas.forEach(function(value) {
             $("#theTable").append(`
                 <tr>
                     <td>${value.name}</td>
@@ -51,7 +51,7 @@ function ShowManufacts() {
         </tr>
     </table>
     `);
-    $.get( "/manufacturers", function( datas ) { //ajax hívás
+    $.get( "/manufacturers", function( datas ) {
         datas.forEach(function(value) {
             $("#manuTable").append(`
                 <tr>
